@@ -1,4 +1,4 @@
-import { toBePartiallyChecked } from '@testing-library/jest-dom/dist/matchers';
+// import { toBePartiallyChecked } from '@testing-library/jest-dom/dist/matchers';
 import {Routes, Route, useNavigate } from 'react-router-dom';
 
 import "./button.css";
