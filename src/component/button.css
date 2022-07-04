@@ -1,0 +1,14 @@
+/* .btn {
+    background-color: white;
+} */
+.btn button {
+    background-color: gainsboro;
+    color: black;
+    transition-duration: 0.4s;
+    
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+
