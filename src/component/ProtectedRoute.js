@@ -4,7 +4,6 @@ import { useUserAuth } from "../context/UserAuthContext";
 const ProtectedRoute = ({ children }) => {
   const { user } = useUserAuth();
 
-  // console.log("Check user in Private: ", user);
   if (!user) {
     return <Navigate to="/" />;
   }
@@ -12,28 +11,3 @@ const ProtectedRoute = ({ children }) => {
 };
 
 export default ProtectedRoute;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Outlet, Navigate } from 'react-router-dom'
-
-// const ProtectedRoute = () => {
-//     let user = {'token':true}
-//     return(
-//         user.token ? <Outlet/> : <Navigate to="/"/>
-//     )
-// }
-
-// export default ProtectedRoute;
-
-

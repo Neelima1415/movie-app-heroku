@@ -8,7 +8,7 @@ import Signup from "./component/Signup";
 import ProtectedRoute from "./component/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import SeatPicker from "./component/SeatPicker";
-//  style={{ width: "1500px" }}
+
 function App() {
   return (
     <Container>

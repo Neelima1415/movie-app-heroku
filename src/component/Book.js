@@ -1,29 +1,19 @@
-// import { toBePartiallyChecked } from '@testing-library/jest-dom/dist/matchers';
-import {Routes, Route, useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 import "./button.css";
 
-export default function Book() {
- 
-const navigate = useNavigate();
+export default function Book(props) {
+  const navigate = useNavigate();
 
-const SeatPicker = () => {
- 
-  navigate('/Picker');
-};
+  const SeatPicker = () => {
+    const data = { title: props.title };
+    navigate("/Picker", { state: data });
+  };
 
-return(
-<div>
-  <div className="btn">
-    <button onClick={SeatPicker}>Book</button>
-  <Routes>
-    <Route path="/Picker" element={ <SeatPicker /> }/>
-  </Routes>
- 
-  </div>
-</div>
-);
+  return (
+    <div>
+      <div className="btn">
+        <button onClick={SeatPicker}>Book</button>
+      </div>
+    </div>
+  );
 }
-
-
-
