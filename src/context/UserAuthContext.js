@@ -5,7 +5,6 @@ import {
   onAuthStateChanged,
   signOut,
   sendPasswordResetEmail,
-  
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -23,13 +22,12 @@ export function UserAuthContextProvider({ children }) {
   function logOut() {
     return signOut(auth);
   }
-  
 
-  function forgotpassword(email)  {
-    return sendPasswordResetEmail(auth, email, {url: 'http://localhost:3000/login', });
+  function forgotpassword(email) {
+    return sendPasswordResetEmail(auth, email, {
+      url: "http://localhost:3000/login",
+    });
   }
-  
-
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {

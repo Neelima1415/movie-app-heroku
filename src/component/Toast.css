@@ -1,11 +1,10 @@
-.btn button {
+.GeeksforGeeks button:enabled {
     background-color: gainsboro;
     color: black;
     transition-duration: 0.4s;
     
 }
-/* button:hover {
+button:hover:enabled {
     background-color: black;
     color: white;
-} */
-
+} 
